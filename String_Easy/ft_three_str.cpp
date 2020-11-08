@@ -11,14 +11,14 @@ string ft_three_str(string str, string str2, string str3)
    kol = ft_len(str);
    kol2 = ft_len(str3);
    target = ft_find_str(str, str2) - 1;
-   for(int i = 0, i < kol; i++)
+   for(int i = 0; i < kol; i++)
    {
        if(i = target)
        {
            i += kol2;
            output += str3;
        }
-       output[i] = str1[i];
+       output[i] = str[i];
    }
    return output;
 }

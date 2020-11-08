@@ -3,7 +3,7 @@
 #include "str_new.h"
 using namespace std;
 
-string ft_max_char_on_end(string str)
+int ft_max_char_on_end(string str)
 {
     bool b = true;
     int kol1, kol2 = 0, nach, i;

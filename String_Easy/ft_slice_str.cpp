@@ -1,4 +1,3 @@
-
 #include <string>
 #include <iostream>
 #include "str_new.h"
@@ -15,17 +14,9 @@ string ft_slice_str(string str, int start, int endi)
     }
    if(endi > len)
        endi = len;
-   for(int i = start; i < endi; i++)
+   for(int i = start; i < endi + 1; i++)
    {
        output += str[i];
    }
    return output;
 }
- int main()
- {
-     int st, en;
-     string str;
-     cin >> str >> st >> en;
-     cout << ft_slice_str(str, st, en);
-     return 0;
- }

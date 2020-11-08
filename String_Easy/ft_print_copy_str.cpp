@@ -10,12 +10,3 @@ void ft_print_copy_str(string str, int num)
         cout << str << " ";
     }
 }
-
-int main()
-{
-    int n;
-    string str;
-    cin >> str >> n;
-    ft_print_copy_str(str, n);
-    return 0;
-}
