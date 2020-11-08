@@ -1,5 +1,5 @@
 #include"mid.h"
-int ft_rev_num(int ch)
+int ft_bin_num(int ch)
 {
     int bin = 0, a = 1, b = 10;
     while(ch != 0)

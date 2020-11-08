@@ -1,5 +1,5 @@
 #include"mid.h"
-int ft_rev_num(int ch, int n)
+int ft_covert_num(int ch, int n)
 {
     int bin = 0, a = 1, b = 10;
     while(ch != 0)

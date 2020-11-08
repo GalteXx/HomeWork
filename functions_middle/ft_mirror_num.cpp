@@ -1,5 +1,5 @@
 #include"mid.h"
-int ft_mirror_num(int ch)
+float ft_mirror_num(int ch)
 {
     int sum = 0, ch1 = ch;
     while(ch != 0)
