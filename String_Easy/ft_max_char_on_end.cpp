@@ -1,6 +1,6 @@
 #include <string>
 #include <iostream>
-//#include "str_new.h"
+#include "str_new.h"
 using namespace std;
 
 string ft_max_char_on_end(string str)
