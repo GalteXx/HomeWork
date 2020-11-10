@@ -1,5 +1,5 @@
-//#include"mid.h"
-long int ft_rev_oct_num(int ch, int n)
+#include"mid.h"
+long int ft_rev_count_num(int ch, int n)
 {
 long int out = 0;
 for (int i = 1; ch != 0; ch/=10, i*=n)
