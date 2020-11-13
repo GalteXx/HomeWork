@@ -16,7 +16,7 @@ string output = "";
         i++;
     }
     i = 3;
-    while(i >= 0)
+    while(i > 0)
     {
         output += str[len - i];
         i--;
