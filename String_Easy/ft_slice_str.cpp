@@ -13,7 +13,7 @@ string ft_slice_str(string str, int start, int endi)
         len;
     }
    if(endi > len)
-       endi = len;
+       endi = len - 1;
    for(int i = start; i < endi + 1; i++)
    {
        output += str[i];
