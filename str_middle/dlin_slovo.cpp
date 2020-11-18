@@ -8,7 +8,7 @@ int ft_len(string str)
     int len;
     for(len = 0; str[len] != '\0'; len++)
     {
-        len;
+        //Zahodit kak to nemec v bar...
     }
 
     return len;

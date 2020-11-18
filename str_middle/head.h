@@ -1,4 +1,5 @@
 #ifndef HEAD_H_INCLUDED
+#include<string>
 #define HEAD_H_INCLUDED
 
 using namespace std;
