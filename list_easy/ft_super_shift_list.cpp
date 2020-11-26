@@ -1,6 +1,6 @@
 #include<iostream>
 #include<vector>
-#include "HQ.h"
+//#include "HQ.h"
 using namespace std;
 int abs(int a)
 {
@@ -23,27 +23,26 @@ if(n > 0)
             mass[i + n] = cop[i];
         }
         else if( i + n >= mass.size())
-            //mass [n - 1] = cop[i];
-            mass[abs(n - i)] = cop[i];
-            //mass [n%mass.size()] = cop[i];
-            cout << "iter" << endl;
+            mass[i + n - mass.size() ] = cop[i];
     }
+
 }
 if(n < 0)
 {
-        for(int i = 0; i < mass.size();i++)
+    for(int i = 0; i < mass.size();i++)
     {
-        if(i + n < mass.size())
+        if(i + n >= 0)
         {
             mass[i + n] = cop[i];
         }
-        else if( i + n == 0)
-            mass [-1*abs(n - i)] = cop[i];
-    }
+        else if( i + n < 0)
+            mass[i + n + mass.size()] = cop[i];
 }
 }
 
-/*
+}
+
+
 int main()
 {
     vector <int> arr;
@@ -64,4 +63,4 @@ int main()
     }
     return 0;
 }
-*/
+
