@@ -1,4 +1,4 @@
-//#include"mid.h"
+#include"mid.h"
 int ft_rev_num(int ch)
 {
     int sum = 0;
