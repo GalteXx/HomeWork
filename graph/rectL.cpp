@@ -8,7 +8,4 @@ void rectL(int x, int y, int Lx, int Ly)
 	lineVertL(x, y, Ly);
 	lineVertL(x + Lx, y, Ly);
 }
-int main()
-{
-	rectL(30,30,30,30);
-}
+

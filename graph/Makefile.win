@@ -1,0 +1,61 @@
+# Project: Project2
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o lineHorizC.o lineHorizL.o lineVertC.o lineVertL.o rect.o rectFull.o rectL.o diagH.o rectFullL.o maxi.o diagV.o
+LINKOBJ  = main.o lineHorizC.o lineHorizL.o lineVertC.o lineVertL.o rect.o rectFull.o rectL.o diagH.o rectFullL.o maxi.o diagV.o
+LIBS     = -L"D:/Installs/Dev-Cpp/MinGW64/lib32" -L"D:/Installs/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static -lbgi -lgdi32 -luser32 -m32
+INCS     = -I"D:/Installs/Dev-Cpp/MinGW64/include" -I"D:/Installs/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Installs/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Installs/Dev-Cpp/MinGW64/include" -I"D:/Installs/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Installs/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Installs/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = ForMain.exe
+CXXFLAGS = $(CXXINCS) -m32
+CFLAGS   = $(INCS) -m32
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+lineHorizC.o: lineHorizC.cpp
+	$(CPP) -c lineHorizC.cpp -o lineHorizC.o $(CXXFLAGS)
+
+lineHorizL.o: lineHorizL.cpp
+	$(CPP) -c lineHorizL.cpp -o lineHorizL.o $(CXXFLAGS)
+
+lineVertC.o: lineVertC.cpp
+	$(CPP) -c lineVertC.cpp -o lineVertC.o $(CXXFLAGS)
+
+lineVertL.o: lineVertL.cpp
+	$(CPP) -c lineVertL.cpp -o lineVertL.o $(CXXFLAGS)
+
+rect.o: rect.cpp
+	$(CPP) -c rect.cpp -o rect.o $(CXXFLAGS)
+
+rectFull.o: rectFull.cpp
+	$(CPP) -c rectFull.cpp -o rectFull.o $(CXXFLAGS)
+
+rectL.o: rectL.cpp
+	$(CPP) -c rectL.cpp -o rectL.o $(CXXFLAGS)
+
+diagH.o: diagH.cpp
+	$(CPP) -c diagH.cpp -o diagH.o $(CXXFLAGS)
+
+rectFullL.o: rectFullL.cpp
+	$(CPP) -c rectFullL.cpp -o rectFullL.o $(CXXFLAGS)
+
+maxi.o: maxi.cpp
+	$(CPP) -c maxi.cpp -o maxi.o $(CXXFLAGS)
+
+diagV.o: diagV.cpp
+	$(CPP) -c diagV.cpp -o diagV.o $(CXXFLAGS)
