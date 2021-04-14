@@ -3,54 +3,75 @@
 #include <string>
 using namespace std;
 
-bool exit = false;
+bool exiot = false;
 
-void execute(string str)
+void coutput(vector <int> vec)
 {
-    //if()
+    for(int i = 0; i < vec.size(); i++)
+    {
+        cout << vec[i];
+    }
 }
 
-void push(vector <int> &vec,int ch)
+void backo(vector <int> &vec)
 {
+    cout << vec[vec.size() - 1] << "\n";
+}
+void push(vector <int> &vec)
+{
+    int ch;
+    cin >> ch;
     vec.push_back(ch);
 }
 
 void pop(vector <int> &vec)
 {
+    backo(vec);
     vec.pop_back();
 }
-void backo(const vector <int> &vec)
+
+void sizez(vector <int> &vec)
 {
-    cout << vec[vec.size() - 1];
-}
-void sizez(const vector <int> &vec)
-{
-    cout << vec.size();
+    cout << vec.size() << "\n";
 }
 
 void clearr(vector <int> &vec)
 {
-    for(int i = 0; i < vec.size(); i++)
+    for(int i = 0; i < vec.size(); true)
         vec.pop_back();
 
-    cout << "ok";
+    cout << " ok";
 }
 void exitt()
 {
-    exit = true;
+    exiot = true;
+}
+
+void execute(vector <int> &vec)
+{
+    string str;
+    cin >> str;
+    if(str == "push")
+        push(vec);
+    if(str == "pop")
+        pop(vec);
+    if(str == "back")
+        backo(vec);
+    if(str == "size")
+        sizez(vec);
+    if(str == "clear")
+        clearr(vec);
+    if(str == "exit")
+        exitt();
 }
 
 int main()
 {
     vector <int> vec;
-/*
-    while(!exit)
+
+    while(!exiot)
     {
-        execute();
+        execute(vec);
     }
-*/
-    string all;
-    cin >>
-    kruke()
     return 0;
 }
