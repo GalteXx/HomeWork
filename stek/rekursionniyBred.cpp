@@ -15,7 +15,8 @@ void coutput(vector <int> vec)
 
 void backo(vector <int> &vec)
 {
-    cout << vec[vec.size() - 1] << "\n";
+    if(vec.size() > 0)
+        cout << vec[vec.size() - 1] << "\n";
 }
 void push(vector <int> &vec)
 {
