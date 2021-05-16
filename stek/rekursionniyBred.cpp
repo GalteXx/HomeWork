@@ -17,18 +17,25 @@ void backo(vector <int> &vec)
 {
     if(vec.size() > 0)
         cout << vec[vec.size() - 1] << "\n";
+    else
+        cout << "error";
 }
 void push(vector <int> &vec)
 {
     int ch;
     cin >> ch;
     vec.push_back(ch);
+    cout << "ok \n";
 }
 
 void pop(vector <int> &vec)
 {
-    backo(vec);
-    vec.pop_back();
+    if(vec.size() > 0) {
+        backo(vec);
+        vec.pop_back();
+    }
+    else
+        cout << "error";
 }
 
 void sizez(vector <int> &vec)
@@ -45,6 +52,7 @@ void clearr(vector <int> &vec)
 }
 void exitt()
 {
+    cout << "bye";
     exiot = true;
 }
 
