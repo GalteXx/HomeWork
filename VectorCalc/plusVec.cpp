@@ -157,25 +157,29 @@ void multiply(vector <int> &vec1, vector <int> vec2, vector <int> &res)
 
 int main()
 {
-    cout<<"Gald to see you using my calculator. \nWe currently support \"+\" \"-\" and \"*\" \nPlease enter 1st number, action, and 2nd number in exat order mentioned, with \nspaces beween \n";
-    cout << "NOTE: negative numbers arent supported"<< endl;
+    //cout<<"Gald to see you using my calculator. \nWe currently support \"+\" \"-\" and \"*\" \nPlease enter 1st number, action, and 2nd number in exat order mentioned, with \nspaces beween \n";
+    //cout << "NOTE: negative numbers arent supported"<< endl;
     while(true)
     {
     vector <int> res;
     vector <int> vec1;
     vector <int> vec2;
-    input(vec1);
-    char act;
-    cin >> act;
+    //input(vec1);
+    //char act;
+    //cin >> act;
 
-    input(vec2);
+    input(res);
 
-    
-    if(act == '+') plusi(vec1, vec2, res);
+    vec1.push_back(2);
+    //if(act == '+') plusi(vec1, vec2, res);
     //cout << "filling: \n";
     //cout << "res: \n";
-    else if(act == '-') minusi(vec1, vec2, res);
-    else if(act == '*') multiply(vec1, vec2, res);
+    //else if(act == '-') minusi(vec1, vec2, res);
+    //else if(act == '*') multiply(vec1, vec2, res);
+    for(int i = 0; i < 101; i++)
+    {
+        multiply(res, vec1, res);
+    }
     print(res);
     cout << "___" << endl;
     

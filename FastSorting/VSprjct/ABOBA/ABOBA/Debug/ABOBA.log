@@ -1,0 +1,6 @@
+﻿  main.cpp
+C:\Users\Maxim\Documents\Архив\Coding\homework\HomeWork\FastSorting\VSprjct\ABOBA\ABOBA\main.cpp(12,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Maxim\Documents\Архив\Coding\homework\HomeWork\FastSorting\VSprjct\ABOBA\ABOBA\main.cpp(33,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Maxim\Documents\Архив\Coding\homework\HomeWork\FastSorting\VSprjct\ABOBA\ABOBA\main.cpp(55,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Maxim\Documents\Архив\Coding\homework\HomeWork\FastSorting\VSprjct\ABOBA\ABOBA\main.cpp(51): warning C4715: split: значение возвращается не при всех путях выполнения
+  ABOBA.vcxproj -> C:\Users\Maxim\Documents\Архив\Coding\homework\HomeWork\FastSorting\VSprjct\ABOBA\Debug\ABOBA.exe
