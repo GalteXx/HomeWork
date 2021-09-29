@@ -1,4 +1,3 @@
-#include "ihate.h"
 #include <iostream>
 void diagV(int n)
 {
