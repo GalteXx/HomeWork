@@ -1,48 +1,55 @@
-#include <fstream>
-#include <iostream>
-#include <string>
-
+#include<fstream>
+#include<iostream>
+#include<string>
 using namespace std;
 
-string read()
+void bruh(int* allah)
 {
-    string str;
-    fstream sus("text.txt");
-    getline(sus, str);
-    cout << str;
-    return str;
-}
-
-string connect(char frst, char scnd, char trd, char fr)
-{
-    string outPut;
-    outPut += frst;
-    outPut += scnd;
-    outPut += trd;
-    outPut += fr;
-    cout << outPut << " - output\n";
-    return outPut;
+    int mini = 999999999, svd;
+    for(int i = 0; i < 26; i++)
+    {
+        if(allah[i] < mini && allah[i] != 0)
+        {
+            mini = allah[i];
+            svd = i;
+        }
+    }
+    cout << (char) svd + 65 << "\n" << allah[svd];
 }
 
 int main()
 {
-    string text;
-    cout << "amoig";
-    text = read();
-    
-    int current = 0, maxi = 0;
-    for(int i = 0; text[i] != '\0'; i += 4)
+    fstream nig("text.txt");
+
+    string str;
+    string saved;
+    int maxx = -1;
+    while(getline(nig, str))
     {
-        if( connect(text[i], text[i + 1], text[i + 2], text[i + 3]) != "DBCA")
+        
+        int kol = 0;
+        for(int i = 0; str[i] != '\0'; i++)
         {
-            if(maxi < current)
-                maxi = current;
-            current = 0;
+            if(str[i] == 'Q')
+            {
+                kol++;
+                if(kol > maxx)
+                {
+                    maxx = kol;
+                    saved = str;
+                }
+            }
         }
-        else
-            current++;
     }
 
-    cout << maxi;
+
+
+    int lettrs[26];
+    for(int i = 0; str[i] != '\0'; i++)
+        lettrs[str[i] - 65]++;
+
+
+    bruh(lettrs);
+
     return 0;
 }
