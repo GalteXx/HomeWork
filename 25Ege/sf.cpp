@@ -1,77 +1,36 @@
-#include<iostream>
-#include<string>
-#include<vector>
+#include <iostream>
+#include <algorithm>
+
 using namespace std;
 
-vector<int> split(string str)
-{
-    vector<int> vec;
-    int temp = 0;
-    for(int i = 0; str[i] != '\0'; i++)
-    {
-        if(str[i] != ' ')
-        {
-            temp += str[i] - 48;
-            temp *= 10;
-        }
-        else{
-            vec.push_back(temp / 10);
-            temp = 0;
-        }
+
+bool isSimple(int test){
+
+    if(sqrt(test) == (int)sqrt(test))
+        return false;
+    for(int i = 0; i < sqrt(test); i++){
+        if(test % i == 0)
+            return false;
     }
-    vec.push_back(temp / 10);
-    temp = 0;
-    return vec;
+
+    return true;
 }
 
+int main(){
 
-int main()
-{
-    string st;
-    getline(cin, st);
-    vector<int> vec = split(st);
-    int kol = 1, imax = 1;
-    bool f = 0;
-    for(int i = 0; i < vec.size() - 1; i++)
-    {
+    for(int i = 125697; i <= 190234; i++){
+        if(sqrt(i) != (int)sqrt(i)){
+            for(int j = 2; j <= sqrt(i); j++){
+                if(i % j == 0){
+                    if(isSimple(j) && isSimple(j / i)){
+                        kol += 2
+                    }
 
-        if(vec[i] == vec[i+1])
-        {}
-        if(vec[i+1] > vec[i] && f == 1)
-        {
-            f = 0;
-            kol = 1;
-        }
-        if(vec[i+1] < vec[i] && f == 0)
-        {
-            f = 1;
-            kol = 1;
-        }
-        if(f == 0)
-        {
-            if(vec[i+1] > vec[i])
-            {
-                kol++;
-                if(imax < kol)
-                    imax = kol;
+                }
             }
-            else
-                kol = 1;
         }
-        else
-        {
-            if(vec[i+1] < vec[i])
-            {
-                kol++;
-                if(imax < kol)
-                    imax = kol;
-            }
-            else
-                kol = 1;
-        }
-
     }
 
-    cout << imax;
+
     return 0;
 }

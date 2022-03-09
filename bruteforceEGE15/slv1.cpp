@@ -1,30 +1,19 @@
-#include<iostream>
+#include <iostream>
 
-bool del(int m, int n)
-{
-    return m % n == 0;
-}
+using namespace std;
 
 int main()
 {
-    int kol = 0;
-    for(int a = 1; a < 1000; a++)
+    cout << "a b c d\n";
+    for(int a = 0; a < 2; a++)
+    for(int b = 0; b < 2; b++)
+    for(int c = 0; c < 2; c++)
+    for(int d = 0; d < 2; d++)
     {
-        bool err = false;
-        for(int x = 1; x < 1001; x++)
-        {
-            if(  !(!((x & 17) != 0) || (!((x & a) != 0) || ((x & 58) != 0))) || (((x & 8) == 8) && ((x & a) != 0) && ((x & 58) == 0))  )
-            {
-                err = true;
-                break;
-            }
 
-        }
-        if(!err)
-        {
-            kol++;
-        }
+        if(  (!(!b || a) && (!c || d)) != (a && b && c && !d)  )
+            cout << a << " " << b << " " << c << " " << d << endl;
+
     }
-    std::cout << kol;
     return 0;
 }
