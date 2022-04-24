@@ -2,23 +2,24 @@
 
 using namespace std;
 
-int fu(int a, int b){
+int fu(int n){
 
-    if(a == b)
+    if(n == 0)
         return 1;
-    if(a > b)
-        return 0;
-
-    return fu(a + 2, b) + fu(a + 5, b);
+    if(n > 0 && n % 2 != 0)
+        return 1 + fu(n-1);
+    
+    return fu(n / 2);
 }
 
 
 int main(){
-
-    for(int i = 0; i < 1000; i++)
-    {
-        if(fu(5,i) == 34)
-            cout << i <<endl;
+    int kol = 0;
+    for(int i = 1; i <= 500000000; i++){
+        if(fu(i) == 3)
+            kol++;
+        
     }
+    cout << kol;
     return 0;
 }
