@@ -1,1 +1,1 @@
-del /S *.jpg
+del /S *.exe
